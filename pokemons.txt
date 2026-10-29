@@ -1,0 +1,53 @@
+===== CADASTRO (POST http://localhost:8080/pokedex) =====
+O "codigo" não vai no JSON: o banco gera sozinho.
+
+{
+  "numero": 25,
+  "nome": "Pikachu",
+  "tipo": "Elétrico",
+  "altura": 0.4,
+  "peso": 6.0,
+  "dataDaCaptura": "2025-08-02"
+}
+
+{
+  "numero": 6,
+  "nome": "Charizard",
+  "tipo": "Fogo",
+  "altura": 1.7,
+  "peso": 90.5,
+  "dataDaCaptura": "2025-06-15"
+}
+
+{
+  "numero": 133,
+  "nome": "Eevee",
+  "tipo": "Normal",
+  "altura": 0.3,
+  "peso": 6.5,
+  "dataDaCaptura": "2025-09-01"
+}
+
+----- Inválido (deve voltar 400): nome vazio, peso negativo e data no futuro -----
+
+{
+  "numero": 150,
+  "nome": "",
+  "tipo": "Psíquico",
+  "altura": 2.0,
+  "peso": -122.0,
+  "dataDaCaptura": "2030-01-01"
+}
+
+
+===== ATUALIZAÇÃO (PUT http://localhost:8080/pokedex/1) =====
+O código vai na URL (/1). No corpo vão os dados novos.
+
+{
+  "numero": 26,
+  "nome": "Raichu",
+  "tipo": "Elétrico",
+  "altura": 0.8,
+  "peso": 30.0,
+  "dataDaCaptura": "2025-08-02"
+}
